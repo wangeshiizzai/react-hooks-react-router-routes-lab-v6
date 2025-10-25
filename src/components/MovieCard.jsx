@@ -1,13 +1,17 @@
-import {Link} from 'react-router-dom';
+// src/components/MovieCard.jsx
+import React from "react";
+import { Link } from "react-router-dom";
 
-function MovieCard({title}) {
-  
+function MovieCard({ movie }) {
   return (
-    <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
-    </article>
+    <div className="movie-card">
+      {/* Movie title in an h2 heading */}
+      <h2>{movie.title}</h2>
+
+      {/* Link text should be "View Info" */}
+      <Link to={`/movie/${movie.id}`}>View Info</Link>
+    </div>
   );
-};
+}
 
 export default MovieCard;
